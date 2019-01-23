@@ -20,6 +20,10 @@ public interface EmployeeDao {
     @Select
     Employee selectById(Integer id);
 
+    @Select
+//    List<Employee> select(List<String> values);
+    List<Employee> select(String[] values);
+
     @Insert
     int insert(Employee employee);
 

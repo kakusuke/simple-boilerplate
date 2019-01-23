@@ -1,7 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'idea'
 
 version = '2.23.0-SNAPSHOT'
-ext.dependentVersion = '2.22.0'
+ext.dependentVersion = '2.21.1-SNAPSHOT'
 
 task copyDomaResources(type: Sync)  {
     from sourceSets.main.resources.srcDirs
@@ -22,8 +23,8 @@ compileTestJava {
 }
 
 repositories {
-    mavenCentral()
     mavenLocal()
+    mavenCentral()
     maven {url 'https://oss.sonatype.org/content/repositories/snapshots/'}
 }
 
